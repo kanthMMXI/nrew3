@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Italian Translator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Translate Italian to Sinhala, Tamil, or Tagalog</h1>
+        <textarea id="textInput" rows="4" cols="50" placeholder="Enter Italian text..."></textarea><br>
+        <input type="file" id="audioInput" accept="audio/*">
+        <br>
+        <select id="languageSelect">
+            <option value="si">Sinhala</option>
+            <option value="ta">Tamil</option>
+            <option value="tl">Tagalog</option>
+        </select>
+        <br>
+        <button onclick="translateText()">Translate</button>
+        <button onclick="startSpeechRecognition()">Speak & Translate</button>
+        <button onclick="speakTranslation()">Speak Translation</button>
+        <h2>Translation:</h2>
+        <p id="outputText"></p>
+    </div>
+
+    <script src="translate.js"></script>
+    <script src="speech-to-text.js"></script>
+</body>
+</html>
